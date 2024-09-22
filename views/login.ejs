@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Online Book Ordering page</title>
+
+        <link rel="stylesheet" href="/styles.css">
+        
+
+    </head>
+
+    <body>
+
+        <div class="login-box">
+            <div class="login-header">
+                <header>Log in</header>
+            </div>
+            
+            <form action="/login" method="post">
+                <div class="input-box">
+                    <input type="text" name="username" class="input-field" placeholder="username" autocomplete="off" required>
+                </div>
+                <div class="input-box">
+                    <input type="password" name="password" class="input-field" id="pwbox" placeholder="Password" autocomplete="off" required>
+                </div>
+
+                <div class="password-show">
+                    <section>
+                        <input type="checkbox" id="check">
+                        <label for="check">Show Password</label>
+                    </section>
+                    <section>
+                        <p>Don't have an Account? <a href="/signup">Create Account</a></p>
+                    </section>
+                </div>
+                <div class="input-submit">
+                    <button type="submit" class="submit-btn" id="submit">Sign In</button>
+                </div>
+            </form>
+            
+        </div>
+
+
+
+        
+        <script>
+
+       document.getElementById('check').addEventListener('change', function() {
+    const passwordInput = document.getElementById('pwbox'); 
+    if (this.checked) {
+        passwordInput.type = 'text'; 
+    } else {
+        passwordInput.type = 'password'; 
+    }
+});
+
+
+
+        </script>
+  </body>
+  </html>
